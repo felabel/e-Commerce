@@ -12,9 +12,14 @@
       {% block base_head%}{% endblock %}
   </head>
   <body>
-        {% include 'base/navbar.html'%}
+        {% include 'base/navbar.html' with brand_name='eCommerce'%}
+
+      <div class="container">
         {% block content %}{% endblock %}
+      </div>
+        
 
         {% include 'base/js.html' %}
+        {% include 'base/footer.html' with brand_name='footer'%}
   </body>
 </html>
